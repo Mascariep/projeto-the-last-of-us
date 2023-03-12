@@ -1,0 +1,24 @@
+/*arquivo criado para fazer todos os resets na aplicação*/
+/*interessante fazer em arquivos separados da estilização para melhor organização*/
+
+/*para resetar todas as configurações que ja vem com o arquivo*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*para retirar as bolinhas das listas*/
+ul{
+    list-style: none;
+}
+
+/*para resetar todos os tipos de ancoras (link)*/
+a{
+    text-decoration: none;
+}
+
+/*para comentar - descomentar
+Crtl+KC - Crtl+KU
+Crtl+; - Crtl+;
+*/

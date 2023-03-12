@@ -1,0 +1,123 @@
+/*tag, class*/
+
+/*body é uma tag*/
+body{
+    font-family: 'Poppins', sans-serif; /*fonte escolhida é poppins e se não carregar, vai chamar a sans-serif*/
+    max-width: 1280px; /*largura máxima da tela*/
+    margin: 0 auto; /*aqui estamos deixando o body centralizado, em cima e em baixo, o auto é para se adaptar as telas automaticamente*/
+}
+
+main::after{ /*criação de um pseudo-elemento, não aparece no HTML, mas em inspecionar ele aparece*/
+    content: '';
+    min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.05926120448179273) 50%, rgba(0, 0, 0, 1) 90%);
+    z-index: -1;
+}
+
+/*conteudo é uma classe*/
+.conteudo{
+    /* background-color: blue; */
+    display: flex; /*aqui os filhos ficam alinhados em row automaticamente*/
+    flex-direction: column; /*aqui retornamos eles para coluna*/
+    min-height: 100vh; /*altura máxima da tela de visualização*/
+    justify-content: space-evenly; /*espaçamento uniforme*/
+}
+
+/* .informacoes{
+    background-color: blueviolet;
+} */
+
+.informacoes .logo{
+    max-width: 350px; /*tamanho máximo do logo "the last of us*/
+    filter: invert(1); /*aqui é uma função CSS, ela vai inverter a cor do logo */
+    margin-bottom: 80px; /*aqui é um esoaçamento entre o logo e o texto (p)*/
+}
+
+.informacoes .descricao{
+    width: 49%; /*aqui vai usar 49% do total disponivel para o texto (p)*/
+    font-size: 24px; /*tamanho da fonte*/
+    color: #ffffff; /*cor utilizada no texto*/
+    line-height: 30px; /*espaçamento entre as linhas*/
+}
+
+.botoes-carrossel{
+    /* background-color: red; */
+    display: flex;
+    justify-content: center; /*alinhando os botões no centro da tela*/
+    gap: 20px; /*espaçamento nos botões*/
+}
+
+.botoes-carrossel .botao{
+    background-color: #ffffff;
+    width: 15px; /*largura*/
+    height: 15px; /*altura*/
+    border-radius: 50%; /*deixando as bordas redondas*/
+    border: 2px solid transparent; /*largura e estilo da borda*/
+    cursor: pointer; /*quando passar o mouse em cima, habilita a opção de clique*/
+    border-color: #ffffff; /*cor da borda*/
+}
+
+.botoes-carrossel .botao.selecionado {/*aqui vai estilizar o elemento, é mais especifico ou seja aqui vai fazer ser ignorado a outra cor*/
+    background-color: #1d8346; /*cor interna do botão*/
+}
+
+.menu-lateral{
+    /* background-color: aqua; */
+    position: fixed; /*position retira o elemento do fluxo normal da pagina (precisa especificar sua posição)*/
+    top: 0; /*aqui estamos definindo ele no máximo do topo*/
+    right: 0; /*aqui estamos definindo ele no máximo da direita*/
+    width: 80px;
+    display: flex;
+    justify-content: center; /*aqui estamos centralizando dentro da div na horizontal*/
+    align-items: center; /*aqui estamos centralizando dentro da div na vertical*/
+    min-height: 100vh; /*aqui aumentamos o tamanho dessa div*/
+}
+
+.menu-lateral ul{
+    display: flex; /*atribuindo flex para poder trabalhar as li*/
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-lateral .icone{
+    width: 30px;
+    filter: invert(1);
+    transition: 0.3s ease-in-out; /*tipo de animação na duração de 3 segundos*/
+}
+
+.menu-lateral .icone:hover{ /*quando passar o mouse em cima vai ser aplicado uma regra*/
+    transform: scale(1.2); /*aqui vai aumentar o tamanho quando passar o mouse por cima*/
+}
+
+.carrossel{
+    position: fixed; /*deixando as imagens fixas na tela*/
+    top: 0; /*aqui estamos definindo ele no máximo do topo*/
+    left: 0; /*aqui estamos definindo ele no máximo da esquerda*/
+    width: 100%; /*tamanho de 100% dentro da div*/
+    z-index: -1;
+}
+
+.carrossel .imagem{
+    width: 100%; /*tamanho da imagem*/
+    height: 100vh; /*tamanho da altura*/
+    object-fit: cover; /*para corrigir a distorção da imagem, vai cobrir a div sem perder qualidade*/
+    display: none;
+    animation: mudarImagem 0.7;
+}
+
+.carrossel .imagem.ativa{
+    display: block;
+}
+
+@keyframes mudarImagem{ /*quando chamar essa key, ela busca a animation*/
+    from{ /*primeiro estado dessa animação (inicial)*/
+        opacity: 0.85;
+    }
+    to{ /*segundo estado dessa animação (final)*/
+        opacity: 1;
+    }
+}
