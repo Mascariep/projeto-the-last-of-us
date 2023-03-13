@@ -1,10 +1,12 @@
 # projeto-the-last-of-us
 
+[Link do projeto](https://projeto-the-last-of-us.surge.sh)
+
 ![imagemFinalizado](./The%20Last%20Of%20Us%20-%20S%C3%A9rie.png)
 
 ## 📖 Introdução
 Projeto realizado com o pessoal do DEV EM DOBRO.
-Este é um projeto projeto front-end, onde temos um carrossel de imagens que são alteradas conforme os botões são clicados pela interação do usuário.
+Este é um projeto front-end, onde temos um carrossel de imagens que são alteradas conforme os botões são clicados pela interação do usuário.
 
 ## ⚒️ Tecnologias 
 
